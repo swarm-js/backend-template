@@ -1,6 +1,6 @@
 {
   "name": "@swarmjs/backend-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic SwarmJS setup with plugins, a good start for a new project",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
