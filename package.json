@@ -24,10 +24,20 @@
     "node": ">=10"
   },
   "dependencies": {
+    "@fastify/cors": "^8.3.0",
+    "@swarmjs/auth": "^1.1.0",
+    "@swarmjs/core": "^1.0.0",
+    "@swarmjs/mail": "^1.0.0",
+    "@swarmjs/mailjet": "^1.0.0",
+    "@swarmjs/monitoring": "^1.0.2",
+    "@swarmjs/swagger": "^1.0.1",
     "@types/http-errors": "^2.0.1",
-    "http-errors": "^2.0.0"
+    "dotenv": "^16.0.3",
+    "http-errors": "^2.0.0",
+    "mongoose": "^7.1.0"
   },
   "devDependencies": {
+    "@types/node": "^20.1.2",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
     "eslint": "^7.8.0",
