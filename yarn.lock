@@ -393,9 +393,9 @@
   integrity sha512-bV+xACCFTsrLR/23ozHO06ZllHZaxC8LlI5YCo79GvU2BrN+rePDU2yXwZIYndNWcMQwRdndRdAhpafOh9AC/g==
 
 "@swarmjs/auth@^1.1.0":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@swarmjs/auth/-/auth-1.1.2.tgz#cb1a66f81446c50c96e1ae680ed0d59396d3195c"
-  integrity sha512-GTEnqzSQu83M4/jfbBFlEnCF+4qTOREkoJHU9XzK3cu8BOac1xq4o6f5xJrwbcu3doyws+O2IftOoFEMwkKi/A==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@swarmjs/auth/-/auth-1.2.0.tgz#9bdcd9cfddd966e6d36346be13940ba58c68f38c"
+  integrity sha512-P97HLy40H4vkFmxBh0/0/qxHnodJ8SW4ytC0jEeekegD0lqre4on1h9vj0iH1H4i8w447Cq9JLEgBPEZbz8DXg==
   dependencies:
     "@fastify/static" "^6.10.2"
     "@simplewebauthn/browser" "^7.2.0"
@@ -415,14 +415,22 @@
     uuid "^9.0.0"
 
 "@swarmjs/core@^1.0.0":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@swarmjs/core/-/core-1.0.2.tgz#6da561b662bd83794b51e93ab52d6830fcbf2ee7"
-  integrity sha512-W1FQI7U03gXHeWDuvlMSNFVP71ZJrO2NNxySIoXseBBSvELIUCVOmxea5NrUo/3zzf+wJXyCSlDkIPsjLK/FcA==
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@swarmjs/core/-/core-1.1.4.tgz#5f8724b578f04bc7f665159426a9aa99359bd791"
+  integrity sha512-TVHdtmEbLiSyl/xJh9KI60Q7JmvdkY1RwucchO4UPa71MDkjFmr2pdPWHHLXRHZmyFk15xP5wfnY3z9x9hEIqA==
   dependencies:
     "@types/http-errors" "^2.0.1"
     fastify "^4.13.0"
     http-errors "^2.0.0"
     require-main-filename "^2.0.0"
+
+"@swarmjs/crud@^1.0.1":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@swarmjs/crud/-/crud-1.1.4.tgz#fd47c82db9551e973128986913df765fdd8ec10a"
+  integrity sha512-F7ajVq7ThYHZL7E2ObX2WhxOcMhmC5Il4DiPT+tEmMd+vaxH7A6nIpewm6SxZO+IhDLGDtLmo+M+spZs3bhTJA==
+  dependencies:
+    http-errors "^2.0.0"
+    qs "^6.11.2"
 
 "@swarmjs/mail@^1.0.0":
   version "1.0.0"
@@ -442,9 +450,9 @@
   integrity sha512-77zLWQyR2Zcsaqg7ZD/C61cpbuYPhhPCXcDF6skBPrAlsuM79S7CvDkNNbtKxArdfdXGAZ6fH/Y6kizwdzA7KQ==
 
 "@swarmjs/swagger@^1.0.1":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@swarmjs/swagger/-/swagger-1.0.3.tgz#7b9ca84a319b626efb0bc606d329512a5278cc5d"
-  integrity sha512-sS6Cz495AYWuZNGK2w3zMvkGO9WgT7shHkqmX4gWm7qiASoyHiSVANPpKBBMV+Vq2y1lZvKdZmL1YuX5C1Sugw==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@swarmjs/swagger/-/swagger-1.0.4.tgz#538cefa5cc12d6ed2adba61a14c9e9eca4022a9d"
+  integrity sha512-yT/KkFt/vXU+wWEnzQEP0CBO+581kOBTdZpji14UNRa1ihe8i63etpSGtc4AeocnvyXW9FNwU/AewHFOCompOw==
   dependencies:
     "@fastify/static" "^6.10.1"
     swagger-ui-dist "^4.18.3"
@@ -3744,9 +3752,9 @@ semver@^7.1.1, semver@^7.2.1, semver@^7.3.4:
     lru-cache "^6.0.0"
 
 semver@^7.3.5, semver@^7.3.8, semver@^7.5.0:
-  version "7.5.1"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.1.tgz#c90c4d631cf74720e46b21c1d37ea07edfab91ec"
-  integrity sha512-Wvss5ivl8TMRZXXESstBA4uR5iXgEN/VC5/sOcuXdVLzcdkz4HWetIoRfG5gb5X+ij/G9rw9YoGn3QoQ8OCSpw==
+  version "7.5.2"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.2.tgz#5b851e66d1be07c1cdaf37dfc856f543325a2beb"
+  integrity sha512-SoftuTROv/cRjCze/scjGyiDtcUyxw1rgYQSZY7XTmtR5hX+dm76iDbTH8TkLPHCQmlbQVSSbNZCPM2hb0knnQ==
   dependencies:
     lru-cache "^6.0.0"
 
@@ -4119,17 +4127,17 @@ tiny-lru@^11.0.1:
   resolved "https://registry.yarnpkg.com/tiny-lru/-/tiny-lru-11.0.1.tgz#629d6ddd88bd03c0929722680167f1feadf576f2"
   integrity sha512-iNgFugVuQgBKrqeO/mpiTTgmBsTP0WL6yeuLfLs/Ctf0pI/ixGqIRm8sDCwMcXGe9WWvt2sGXI5mNqZbValmJg==
 
-tldts-core@^6.0.5:
-  version "6.0.5"
-  resolved "https://registry.yarnpkg.com/tldts-core/-/tldts-core-6.0.5.tgz#6babfadfe695f93e7c842de19c7c11930906f41c"
-  integrity sha512-DBpylEmOYzU+x8oiJU6pULwr1WPIoW1YYXxf8K88N+mEtIB9QOSCsMj0KdARoJFS/rMDWRguB4dRKL0zqq6LWQ==
+tldts-core@^6.0.6:
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/tldts-core/-/tldts-core-6.0.6.tgz#2c38000a55f47cf3168d285272a33796e0d4d4e2"
+  integrity sha512-t8sSyItKN8ozeK+4X+Ll59DA2uBP08vafm5m2yQfAp4J/fYRzymWw5dWyoM3gW3JOVKN3by9qQM8JuVhmvqAig==
 
 tldts@~6.0.5:
-  version "6.0.5"
-  resolved "https://registry.yarnpkg.com/tldts/-/tldts-6.0.5.tgz#553c18c3f18cb860329b2b859546ab47647d0cd4"
-  integrity sha512-2JQhXcZbp8eh2Ka81yvu5WzBa7NPKhGhXHy+dz0grD7w3DjgK0CsryEwNjVs6i170VF4sZAkwP8pGb1q53wiiQ==
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/tldts/-/tldts-6.0.6.tgz#34a218868bb37a7ef29e9403c54525952a48f908"
+  integrity sha512-bXqXNSIbzCXFHg+JDEzKhFn9XEcosLgamB0SqDNzOYJHt0S4BEnKUhwoesNmWkb0xRJJfld6lZNyvmN1837hlA==
   dependencies:
-    tldts-core "^6.0.5"
+    tldts-core "^6.0.6"
 
 to-regex-range@^5.0.1:
   version "5.0.1"

@@ -27,6 +27,7 @@
     "@fastify/cors": "^8.3.0",
     "@swarmjs/auth": "^1.1.0",
     "@swarmjs/core": "^1.0.0",
+    "@swarmjs/crud": "^1.0.1",
     "@swarmjs/mail": "^1.0.0",
     "@swarmjs/mailjet": "^1.0.0",
     "@swarmjs/monitoring": "^1.0.2",

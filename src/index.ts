@@ -4,6 +4,7 @@ import { MonitorPlugin } from '@swarmjs/monitoring'
 import { SwaggerPlugin } from '@swarmjs/swagger'
 import mongoose, { ConnectOptions } from 'mongoose'
 import User from './models/User'
+import Users from './controllers/Users'
 
 require('dotenv').config()
 
@@ -42,6 +43,8 @@ app.use(AuthPlugin, {
     .split(',')
     .filter(a => a.length)
 })
+
+app.controllers.add(Users)
 
 async function main () {
   mongoose.connect(process.env.MONGO_DSN ?? 'mongodb://localhost:27017/test', {
