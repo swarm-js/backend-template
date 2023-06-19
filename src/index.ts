@@ -3,8 +3,9 @@ import { Swarm } from '@swarmjs/core'
 import { MonitorPlugin } from '@swarmjs/monitoring'
 import { SwaggerPlugin } from '@swarmjs/swagger'
 import mongoose, { ConnectOptions } from 'mongoose'
-import User from './models/User'
 import Users from './controllers/Users'
+import config from './config/authConfig'
+import User from './models/User'
 
 require('dotenv').config()
 
@@ -18,7 +19,8 @@ const app = new Swarm({
       url: process.env.BASE_URL ?? '',
       description: process.env.APP_TITLE ?? ''
     }
-  ]
+  ],
+  languages: ['fr', 'en']
 })
 
 app.fastify.register(require('@fastify/cors'), {
@@ -29,20 +31,7 @@ app.fastify.register(require('@fastify/cors'), {
 
 app.use(MonitorPlugin)
 app.use(SwaggerPlugin)
-app.use(AuthPlugin, {
-  jwtKey: process.env.AUTH_JWT_KEY,
-  logo: (process.env.LOGO ?? '').length ? process.env.LOGO : null,
-  themeColor: process.env.COLOR ?? '#2196F3',
-  model: User,
-  validationRequired: process.env.AUTH_VALIDATION_REQUIRED === 'true',
-  googleClientId: process.env.AUTH_GOOGLE_CLIENT_ID ?? '',
-  googleClientSecret: process.env.AUTH_GOOGLE_CLIENT_SECRET ?? '',
-  facebookClientId: process.env.AUTH_FACEBOOK_CLIENT_ID ?? '',
-  facebookClientSecret: process.env.AUTH_FACEBOOK_CLIENT_SECRET ?? '',
-  allowedDomains: (process.env.AUTH_DOMAINS ?? '')
-    .split(',')
-    .filter(a => a.length)
-})
+app.use(AuthPlugin, { ...config, model: User })
 
 app.controllers.add(Users)
 

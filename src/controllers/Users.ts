@@ -1,4 +1,5 @@
 import {
+  Accepts,
   Access,
   Delete,
   Description,
@@ -9,6 +10,7 @@ import {
   Post,
   Prefix,
   Put,
+  Returns,
   Title
 } from '@swarmjs/core'
 import User from '../models/User'
@@ -46,8 +48,48 @@ export default class Users {
 
   @Post('/')
   @Access('admin')
-  static async create (request: any, reply: FastifyReply) {
-    return crud.create(request, reply)
+  @Accepts({
+    type: 'object',
+    properties: {
+      firstname: {
+        type: 'string'
+      },
+      lastname: {
+        type: 'string'
+      },
+      email: {
+        type: 'string',
+        format: 'email'
+      },
+      redirect: {
+        type: 'string',
+        format: 'uri'
+      }
+    },
+    required: ['firstname', 'lastname', 'email', 'redirect']
+  })
+  @Returns(
+    200,
+    {
+      type: 'object',
+      properties: {
+        status: { type: 'boolean' }
+      }
+    },
+    'The invitation has been sent'
+  )
+  static async create (request: any) {
+    console.log(request.headers)
+    const status = await User.invite(
+      request,
+      request.body.email,
+      request.body.redirect,
+      {
+        firstname: request.body.firstname,
+        lastname: request.body.lastname
+      }
+    )
+    return { status }
   }
 
   @Get('/:id')

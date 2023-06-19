@@ -393,9 +393,9 @@
   integrity sha512-bV+xACCFTsrLR/23ozHO06ZllHZaxC8LlI5YCo79GvU2BrN+rePDU2yXwZIYndNWcMQwRdndRdAhpafOh9AC/g==
 
 "@swarmjs/auth@^1.1.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@swarmjs/auth/-/auth-1.2.0.tgz#9bdcd9cfddd966e6d36346be13940ba58c68f38c"
-  integrity sha512-P97HLy40H4vkFmxBh0/0/qxHnodJ8SW4ytC0jEeekegD0lqre4on1h9vj0iH1H4i8w447Cq9JLEgBPEZbz8DXg==
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@swarmjs/auth/-/auth-1.3.0.tgz#bf02591b7d1098a4e5475d852184d1657b18c9d9"
+  integrity sha512-MSntYaLWNQC8cXQDomnhyV+69Rr29miP0KHPKk1jeiPmFh6XITukqoaGQAxPSKuV0FbdXruIyuOBLdUAN6/baQ==
   dependencies:
     "@fastify/static" "^6.10.2"
     "@simplewebauthn/browser" "^7.2.0"
@@ -415,9 +415,9 @@
     uuid "^9.0.0"
 
 "@swarmjs/core@^1.0.0":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@swarmjs/core/-/core-1.1.4.tgz#5f8724b578f04bc7f665159426a9aa99359bd791"
-  integrity sha512-TVHdtmEbLiSyl/xJh9KI60Q7JmvdkY1RwucchO4UPa71MDkjFmr2pdPWHHLXRHZmyFk15xP5wfnY3z9x9hEIqA==
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@swarmjs/core/-/core-1.2.3.tgz#24fc46f1edc0729918afa228c7f929086586b515"
+  integrity sha512-ZJ+3VmqIC6XIWR7WnxZjnHn5sjQA45yJV8mPJofp4BhNxLQoDqGI9d/F8KmnsDeDDBwMdw+Z/1t0AGgUzTl5Sg==
   dependencies:
     "@types/http-errors" "^2.0.1"
     fastify "^4.13.0"
@@ -4127,17 +4127,17 @@ tiny-lru@^11.0.1:
   resolved "https://registry.yarnpkg.com/tiny-lru/-/tiny-lru-11.0.1.tgz#629d6ddd88bd03c0929722680167f1feadf576f2"
   integrity sha512-iNgFugVuQgBKrqeO/mpiTTgmBsTP0WL6yeuLfLs/Ctf0pI/ixGqIRm8sDCwMcXGe9WWvt2sGXI5mNqZbValmJg==
 
-tldts-core@^6.0.6:
-  version "6.0.6"
-  resolved "https://registry.yarnpkg.com/tldts-core/-/tldts-core-6.0.6.tgz#2c38000a55f47cf3168d285272a33796e0d4d4e2"
-  integrity sha512-t8sSyItKN8ozeK+4X+Ll59DA2uBP08vafm5m2yQfAp4J/fYRzymWw5dWyoM3gW3JOVKN3by9qQM8JuVhmvqAig==
+tldts-core@^6.0.8:
+  version "6.0.8"
+  resolved "https://registry.yarnpkg.com/tldts-core/-/tldts-core-6.0.8.tgz#e94a920485d00dcf79514f2195199c492466fadb"
+  integrity sha512-9DoeDV0eqDmXKkg43LGxLdJZstcdNfdhAElerrChj78Y3fYcidTKtVSLjXC0w6naMWYejPvJtTpnRPWHJJD4yw==
 
 tldts@~6.0.5:
-  version "6.0.6"
-  resolved "https://registry.yarnpkg.com/tldts/-/tldts-6.0.6.tgz#34a218868bb37a7ef29e9403c54525952a48f908"
-  integrity sha512-bXqXNSIbzCXFHg+JDEzKhFn9XEcosLgamB0SqDNzOYJHt0S4BEnKUhwoesNmWkb0xRJJfld6lZNyvmN1837hlA==
+  version "6.0.8"
+  resolved "https://registry.yarnpkg.com/tldts/-/tldts-6.0.8.tgz#e2838d0d78fb6565d0c6a3d2c6cdbadb30fe9738"
+  integrity sha512-gc0SFsuvk5IfBMTfDDy7MnH5Ut138HkavoiSiOTbyaPMCFU5eN95Rl9YrovVCkD0eOrwEhxXYbxe2bcKRcc7ag==
   dependencies:
-    tldts-core "^6.0.6"
+    tldts-core "^6.0.8"
 
 to-regex-range@^5.0.1:
   version "5.0.1"
