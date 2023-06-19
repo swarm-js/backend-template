@@ -49,16 +49,7 @@ export default class Users {
   @Post('/')
   @Access('admin')
   @Accepts('SendInvitation')
-  @Returns(
-    200,
-    {
-      type: 'object',
-      properties: {
-        status: { type: 'boolean' }
-      }
-    },
-    'The invitation has been sent'
-  )
+  @Returns(200, 'BooleanStatus', 'The invitation has been sent')
   @Returns(409, 'Error', 'A user already exists with this email address')
   static async create (request: any) {
     const status = await User.invite(
