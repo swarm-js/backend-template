@@ -61,7 +61,6 @@ export default class Users {
   )
   @Returns(409, 'Error', 'A user already exists with this email address')
   static async create (request: any) {
-    console.log(request.headers)
     const status = await User.invite(
       request,
       request.body.email,
