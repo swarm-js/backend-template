@@ -48,26 +48,7 @@ export default class Users {
 
   @Post('/')
   @Access('admin')
-  @Accepts({
-    type: 'object',
-    properties: {
-      firstname: {
-        type: 'string'
-      },
-      lastname: {
-        type: 'string'
-      },
-      email: {
-        type: 'string',
-        format: 'email'
-      },
-      redirect: {
-        type: 'string',
-        format: 'uri'
-      }
-    },
-    required: ['firstname', 'lastname', 'email', 'redirect']
-  })
+  @Accepts('SendInvitation')
   @Returns(
     200,
     {
