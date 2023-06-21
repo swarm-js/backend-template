@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "address": {
+      "$ref": "UserAddress"
+    }
+  }
+}

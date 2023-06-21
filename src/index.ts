@@ -6,6 +6,7 @@ import mongoose, { ConnectOptions } from 'mongoose'
 import Users from './controllers/Users'
 import config from './config/authConfig'
 import User from './models/User'
+import Upload from './controllers/Upload'
 
 require('dotenv').config()
 
@@ -29,11 +30,23 @@ app.fastify.register(require('@fastify/cors'), {
   allowedHeaders: ['Content-Type', 'Authorization']
 })
 
+app.fastify.register(require('@fastify/multipart'), {
+  limits: {
+    fieldNameSize: 100, // Max field name size in bytes
+    fieldSize: +(process.env.FILE_UPLOAD_LIMIT ?? 5242880), // Max field value size in bytes
+    fields: 10, // Max number of non-file fields
+    fileSize: +(process.env.FILE_UPLOAD_LIMIT ?? 5242880), // For multipart forms, the max file size in bytes
+    files: 1, // Max number of file fields
+    headerPairs: 2000 // Max number of header key=>value pairs
+  }
+})
+
 app.use(MonitorPlugin)
 app.use(SwaggerPlugin)
 app.use(AuthPlugin, { ...config, model: User })
 
 app.controllers.add(Users)
+app.controllers.add(Upload)
 
 async function main () {
   mongoose.connect(process.env.MONGO_DSN ?? 'mongodb://localhost:27017/test', {

@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@fastify/cors": "^8.3.0",
+    "@fastify/multipart": "^7.7.0",
     "@swarmjs/auth": "^1.1.0",
     "@swarmjs/core": "^1.0.0",
     "@swarmjs/crud": "^1.0.1",
@@ -33,11 +34,15 @@
     "@swarmjs/monitoring": "^1.0.2",
     "@swarmjs/swagger": "^1.0.1",
     "@types/http-errors": "^2.0.1",
+    "aws-sdk": "^2.1401.0",
+    "axios": "^1.4.0",
     "dotenv": "^16.0.3",
+    "heic-convert": "^1.2.4",
     "http-errors": "^2.0.0",
     "mongoose": "^7.1.0"
   },
   "devDependencies": {
+    "@types/heic-convert": "^1.2.0",
     "@types/node": "^20.1.2",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",

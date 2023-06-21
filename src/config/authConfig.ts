@@ -21,5 +21,7 @@ export default {
   google: process.env.AUTH_GOOGLE === 'true',
   googleAuthenticator: process.env.AUTH_GOOGLE_AUTHENTICATOR === 'true',
   ethereum: process.env.AUTH_ETHEREUM === 'true',
-  invite: process.env.AUTH_INVITE === 'true'
+  invite: process.env.AUTH_INVITE === 'true',
+  register: process.env.AUTH_REGISTER === 'true',
+  sessionDuration: +(process.env.AUTH_SESSION_DURATION ?? 3600)
 } as AuthPluginOptions
