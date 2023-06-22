@@ -27,6 +27,7 @@ interface IUser extends AuthFields {
   firstname: string
   lastname: string
   email: string
+  phone: string
   avatar: string
   address: IUserAddress
   location: IUserLocation
@@ -40,6 +41,7 @@ const userSchema = new mongoose.Schema<IUser, UserModel, {}>(
     firstname: { $type: String, default: '' },
     lastname: { $type: String, default: '' },
     email: { $type: String, default: '' },
+    phone: { $type: String, default: '' },
     avatar: {
       $type: String,
       default:
