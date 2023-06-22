@@ -15,6 +15,7 @@ import {
 } from '@swarmjs/core'
 import User from '../models/User'
 import { Crud } from '@swarmjs/crud'
+import { NotFound } from 'http-errors'
 
 const crud = new Crud(User)
 
@@ -114,5 +115,36 @@ export default class Users {
   @Returns(404, 'Error', 'User not found')
   static async delete (request: any, reply: FastifyReply) {
     return crud.delete(request, reply)
+  }
+
+  @Get('/:id/access')
+  @Access('admin')
+  @Parameter('id', { type: 'string' }, 'User ID')
+  @Returns(200, 'UserAccess', 'User access list')
+  @Returns(403, 'Error', 'You cannot access this user')
+  @Returns(404, 'Error', 'User not found')
+  static async getAccess (request: any) {
+    const user = await User.findById(request.params.id)
+    if (!user) throw new NotFound()
+
+    return user.swarmUserAccess
+  }
+
+  @Put('/:id/access')
+  @Access('admin')
+  @Parameter('id', { type: 'string' }, 'User ID')
+  @Accepts('UserAccess')
+  @Returns(200, 'Empty', 'User access list updated')
+  @Returns(403, 'Error', 'You cannot access this user')
+  @Returns(404, 'Error', 'User not found')
+  static async updateAccess (request: any) {
+    const user = await User.findById(request.params.id)
+    if (!user) throw new NotFound()
+
+    user.swarmUserAccess = request.body
+
+    await user.save()
+
+    return {}
   }
 }

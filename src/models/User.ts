@@ -1,4 +1,8 @@
-import { MongooseAuthPlugin, InvitationMethods } from '@swarmjs/auth'
+import {
+  MongooseAuthPlugin,
+  InvitationMethods,
+  AuthFields
+} from '@swarmjs/auth'
 import { MailjetPlugin } from '@swarmjs/mailjet'
 import mongoose from 'mongoose'
 import config from '../config/authConfig'
@@ -19,7 +23,7 @@ interface IUserLocation {
   coordinates: number[]
 }
 
-interface IUser {
+interface IUser extends AuthFields {
   firstname: string
   lastname: string
   email: string

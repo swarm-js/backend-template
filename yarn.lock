@@ -437,9 +437,9 @@
   integrity sha512-bV+xACCFTsrLR/23ozHO06ZllHZaxC8LlI5YCo79GvU2BrN+rePDU2yXwZIYndNWcMQwRdndRdAhpafOh9AC/g==
 
 "@swarmjs/auth@^1.1.0":
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/@swarmjs/auth/-/auth-1.3.5.tgz#15a664ea4260fe9936c937eb290eb857024bd34c"
-  integrity sha512-IuB7IqwKqr8HAPz5JF+bTLt+M11+oZTupz3eEakyEFQMFlmh5zfJPEhnjbTploQ9FniEDxItlPvNljaI32TvsQ==
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/@swarmjs/auth/-/auth-1.3.6.tgz#5be311ae987f15294d8a4fd9828db13f8455a87c"
+  integrity sha512-6Mt4QUaF56mB8ACZRT8p9GWB/RTO3GmHVgU5DiS1ggWBvmAMTGCRDSvJQQQ9fPUqZ0IhEd2ku8Pv4NLxNqHh3g==
   dependencies:
     "@fastify/static" "^6.10.2"
     "@simplewebauthn/browser" "^7.2.0"
