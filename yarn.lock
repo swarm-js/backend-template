@@ -413,9 +413,9 @@
     "@types/node" "^18.11.9"
 
 "@simplewebauthn/server@^7.2.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@simplewebauthn/server/-/server-7.3.0.tgz#2e72c7b1037eb09dca34c57b751e85b70727051b"
-  integrity sha512-mzKCm+4R18BPhejhdePx64Y6l1XTkxpnZuXXs8GKMd2vtEobG2y15XQlp6hL1GzZ8q+shMVi6QhYEj1G9X0trw==
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/@simplewebauthn/server/-/server-7.3.1.tgz#366915f2ee2686792bbe8ec25b80a1bdeca3e370"
+  integrity sha512-UFGS18DHudw+50IsdYHCc4C2mk+CZtXr5Ai0RIBV1z5GK25G/6kAXyBBAOmiJ3fB7B1AOvo0e+A6qFh2IBjDCQ==
   dependencies:
     "@hexagon/base64" "^1.1.25"
     "@peculiar/asn1-android" "^2.3.3"
@@ -437,9 +437,9 @@
   integrity sha512-bV+xACCFTsrLR/23ozHO06ZllHZaxC8LlI5YCo79GvU2BrN+rePDU2yXwZIYndNWcMQwRdndRdAhpafOh9AC/g==
 
 "@swarmjs/auth@^1.1.0":
-  version "1.3.6"
-  resolved "https://registry.yarnpkg.com/@swarmjs/auth/-/auth-1.3.6.tgz#5be311ae987f15294d8a4fd9828db13f8455a87c"
-  integrity sha512-6Mt4QUaF56mB8ACZRT8p9GWB/RTO3GmHVgU5DiS1ggWBvmAMTGCRDSvJQQQ9fPUqZ0IhEd2ku8Pv4NLxNqHh3g==
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/@swarmjs/auth/-/auth-1.3.7.tgz#7bc4dec40979037e527ab12fb19dffafe4a3faff"
+  integrity sha512-Kl/vgb2hgo2EU0PIan5lIMl1teuWc8VE/j18zZ/d7rO1o1FMZaTvcp9R7O2oJd0YOZKPNoTgKPMDdP69daIjtw==
   dependencies:
     "@fastify/static" "^6.10.2"
     "@simplewebauthn/browser" "^7.2.0"
@@ -1833,9 +1833,9 @@ esutils@^2.0.2:
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
 ethers@^6.3.0:
-  version "6.6.0"
-  resolved "https://registry.yarnpkg.com/ethers/-/ethers-6.6.0.tgz#596e512cd91ef86b04f95f2e6be58a22ec4f2ce6"
-  integrity sha512-7D2U+n8eZYmh592VZqap9vBu50jN7YUDHqAmwBYTMntmUKC9RVgcqcFbd+3DTCOQ1jMyK6QHv1usbcfgiGaHOA==
+  version "6.6.1"
+  resolved "https://registry.yarnpkg.com/ethers/-/ethers-6.6.1.tgz#c3c80cdc10190fa5457d5eced25aa16940e73f6b"
+  integrity sha512-bjNPf/EU4l1jQlAslOmOlyHqjOnM0W7LRPuSf0Kt0tYV4RpUEZsdGWDhvFXfogIhfzXJ/v2tPz4HqXwBt5T8mA==
   dependencies:
     "@adraffy/ens-normalize" "1.9.2"
     "@noble/hashes" "1.1.2"
@@ -3927,7 +3927,14 @@ semver@^7.1.1, semver@^7.2.1, semver@^7.3.4:
   dependencies:
     lru-cache "^6.0.0"
 
-semver@^7.3.5, semver@^7.3.8, semver@^7.5.0:
+semver@^7.3.5, semver@^7.3.8:
+  version "7.5.3"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.3.tgz#161ce8c2c6b4b3bdca6caadc9fa3317a4c4fe88e"
+  integrity sha512-QBlUtyVk/5EeHbi7X0fw6liDZc7BBmEaSYn01fMU1OUYbf6GPsbTtd8WmnqbI20SeycoHSeiybkE/q1Q+qlThQ==
+  dependencies:
+    lru-cache "^6.0.0"
+
+semver@^7.5.0:
   version "7.5.2"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.2.tgz#5b851e66d1be07c1cdaf37dfc856f543325a2beb"
   integrity sha512-SoftuTROv/cRjCze/scjGyiDtcUyxw1rgYQSZY7XTmtR5hX+dm76iDbTH8TkLPHCQmlbQVSSbNZCPM2hb0knnQ==
