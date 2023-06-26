@@ -61,17 +61,13 @@ export default class Users {
   @Returns(200, 'BooleanStatus', 'The invitation has been sent')
   @Returns(409, 'Error', 'A user already exists with this email address')
   @Returns(403, 'Error', 'You cannot invite this user')
+  @Returns(500, 'Error', 'Email cannot be sent')
   static async create (request: any) {
-    const status = await User.invite(
-      request,
-      request.body.email,
-      request.body.redirect,
-      {
-        firstname: request.body.firstname,
-        lastname: request.body.lastname
-      }
-    )
-    return { status }
+    await User.invite(request, request.body.email, request.body.redirect, {
+      firstname: request.body.firstname,
+      lastname: request.body.lastname
+    })
+    return { status: true }
   }
 
   @Get('/:id')
