@@ -7,6 +7,7 @@ import Users from './controllers/Users'
 import config from './config/authConfig'
 import User from './models/User'
 import Upload from './controllers/Upload'
+import path from 'path'
 
 require('dotenv').config()
 
@@ -21,7 +22,10 @@ const app = new Swarm({
       description: process.env.APP_TITLE ?? ''
     }
   ],
-  languages: ['fr', 'en']
+  languages: ['fr', 'en'],
+  http2: process.env.HTTP2 === 'true',
+  sslKeyPath: path.join(__dirname, '..', process.env.HTTPS_KEY_FILE ?? ''),
+  sslCertPath: path.join(__dirname, '..', process.env.HTTPS_CERT_FILE ?? '')
 })
 
 app.fastify.register(require('@fastify/cors'), {
