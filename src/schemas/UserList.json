@@ -4,7 +4,7 @@
     "docs": {
       "type": "array",
       "items": {
-        "$ref": "UserInList"
+        "$ref": "UserInList.json"
       }
     },
     "page": {

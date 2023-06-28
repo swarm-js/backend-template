@@ -21,7 +21,7 @@
       "type": "string"
     },
     "address": {
-      "$ref": "UserAddress"
+      "$ref": "UserAddress.json"
     }
   }
 }

@@ -18,7 +18,8 @@
     "fix:lint": "eslint src --ext .ts --fix",
     "version": "standard-version",
     "reset-hard": "git clean -dfx && git reset --hard && yarn",
-    "prepare-release": "run-s reset-hard version"
+    "prepare-release": "run-s reset-hard version",
+    "compile-schemas": "json2ts -i 'src/schemas/*.json' -o src/types --cwd src/schemas"
   },
   "engines": {
     "node": ">=10"
@@ -50,6 +51,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.22.0",
+    "json-schema-to-typescript": "^13.0.2",
     "nodemon": "^2.0.20",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.1",
