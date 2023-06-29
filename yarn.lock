@@ -489,9 +489,9 @@
     require-main-filename "^2.0.0"
 
 "@swarmjs/crud@^1.0.1":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@swarmjs/crud/-/crud-1.1.4.tgz#fd47c82db9551e973128986913df765fdd8ec10a"
-  integrity sha512-F7ajVq7ThYHZL7E2ObX2WhxOcMhmC5Il4DiPT+tEmMd+vaxH7A6nIpewm6SxZO+IhDLGDtLmo+M+spZs3bhTJA==
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@swarmjs/crud/-/crud-1.2.5.tgz#ca8b15c5c77c4a4b54c3ec3a8d1b67ee8af6ce2c"
+  integrity sha512-wPjSU7rGwP2Wtt0kH9IliO1L+BlqERlwpy3JZvh7Nj1clynF4qcWIO/NsIQDqFmaSz2y0C5MRYuIHjbXQIA6Ow==
   dependencies:
     http-errors "^2.0.0"
     qs "^6.11.2"
