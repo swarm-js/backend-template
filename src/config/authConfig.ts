@@ -6,6 +6,7 @@ export default {
   jwtKey: process.env.AUTH_JWT_KEY,
   rpName: process.env.APP_TITLE ?? '',
   logo: (process.env.LOGO ?? '').length ? process.env.LOGO : null,
+  logoBackgroundColor: process.env.LOGO_BG ?? 'transparent',
   themeColor: process.env.COLOR ?? '#2196F3',
   validationRequired: process.env.AUTH_VALIDATION_REQUIRED === 'true',
   googleClientId: process.env.AUTH_GOOGLE_CLIENT_ID ?? '',
