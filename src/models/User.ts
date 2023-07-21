@@ -3,7 +3,7 @@ import {
   InvitationMethods,
   AuthFields
 } from '@swarmjs/auth'
-import { MailjetPlugin } from '@swarmjs/mailjet'
+import { SmtpPlugin } from '@swarmjs/smtp'
 import mongoose from 'mongoose'
 import config from '../config/authConfig'
 import { geocode } from '../tools/geocode'
@@ -36,7 +36,7 @@ interface IUser extends AuthFields {
 interface UserModel extends mongoose.Model<IUser, {}, {}>, InvitationMethods {}
 
 // 2. Create a Schema corresponding to the document interface.
-const userSchema = new mongoose.Schema<IUser, UserModel, {}>(
+const schema = new mongoose.Schema<IUser, UserModel, {}>(
   {
     firstname: { $type: String, default: '' },
     lastname: { $type: String, default: '' },
@@ -72,7 +72,7 @@ const userSchema = new mongoose.Schema<IUser, UserModel, {}>(
   { typeKey: '$type' }
 )
 
-userSchema.pre('save', async function (next) {
+schema.pre('save', async function (next) {
   if (this.isModified('address')) {
     this.location = {
       type: 'Point',
@@ -91,16 +91,19 @@ userSchema.pre('save', async function (next) {
   return next()
 })
 
-userSchema.index({ location: '2dsphere' })
+schema.index({ location: '2dsphere' })
 
-userSchema.plugin(MongooseAuthPlugin, { ...config })
+schema.plugin(MongooseAuthPlugin, { ...config })
 
-userSchema.plugin(MailjetPlugin, {
-  apiKey: process.env.MJ_API_KEY,
-  apiSecret: process.env.MJ_API_SECRET,
+schema.plugin(SmtpPlugin, {
+  host: process.env.SMTP_HOST,
+  port: +(process.env.SMTP_PORT ?? 465),
+  secure: process.env.SMTP_SECURE === 'true',
+  user: process.env.SMTP_USER,
+  pass: process.env.SMTP_PASS,
   fromEmail: process.env.FROM_EMAIL,
   fromName: process.env.FROM_NAME
 })
 
 // 3. Create a Model.
-export default mongoose.model<IUser, UserModel>('User', userSchema)
+export default mongoose.model<IUser, UserModel>('User', schema)

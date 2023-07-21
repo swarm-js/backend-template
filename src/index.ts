@@ -2,12 +2,14 @@ import { AuthPlugin } from '@swarmjs/auth'
 import { Swarm } from '@swarmjs/core'
 import { MonitorPlugin } from '@swarmjs/monitoring'
 import { SwaggerPlugin } from '@swarmjs/swagger'
+import { AdminPlugin } from '@swarmjs/admin'
 import mongoose, { ConnectOptions } from 'mongoose'
 import Users from './controllers/Users'
 import config from './config/authConfig'
 import User from './models/User'
 import Upload from './controllers/Upload'
 import path from 'path'
+import adminConfig from './admin'
 
 require('dotenv').config()
 
@@ -48,6 +50,7 @@ app.fastify.register(require('@fastify/multipart'), {
 app.use(MonitorPlugin)
 app.use(SwaggerPlugin)
 app.use(AuthPlugin, { ...config, model: User })
+app.use(AdminPlugin, adminConfig)
 
 app.controllers.add(Users)
 app.controllers.add(Upload)
